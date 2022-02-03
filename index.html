@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+
+* {
+  box-sizing: border-box;
+}
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.topnav {
+  overflow: hidden;
+  
+  background-color: #333;;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.column {
+  float: left;
+  width: 34%;
+  padding: 60px;
+  text-align: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: white;
+}
+
+.containerTab {
+  padding: 70px;
+  color: white;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.closebtn {
+  float: center;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div class="topnav">
+  <a class="active" href="login.html">Login</a>
+  <a href="register.html">Register</a>
+</div>
+<div style="text-align:center">
+  <h1 style="color:Green;text-align:center;">Web Page</h1>
+  <p style="font:Italic;">Click on the boxes for content</p>
+</div>
+
+
+<div class="row">
+  <div class="column" onclick="openTab('b1');" style="background:grey;">
+    Web page
+  </div>
+  <div class="column" onclick="openTab('b2');" style="background:black;">
+   Web page Usage
+  </div>
+  <div class="column" onclick="openTab('b3');" style="background:black;">
+   Advantage of webpage
+  </div>
+<div class="column" onclick="openTab('b4');" style="background:grey;">
+   Features
+  </div>
+</div>
+
+
+<div id="b1" class="containerTab" style="display:none;background:grey">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Web page</h2>
+  <p>A web page or webpage is a document, commonly written in HTML, that is viewed in an Internet browser. A web page can be accessed by entering a URL address into a browser's address bar. A web page may contain text, graphics, and hyperlinks to other web pages and files.</p>
+</div>
+
+<div id="b2" class="containerTab" style="display:none;background:black">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Web page Usage</h2>
+  <p>A web page may contain text, graphics, and hyperlinks to other web pages and files. A web page is often used to provide information to viewers, including pictures or videos to help illustrate important topics. A web page may also be used as a method to sell products or services to viewers.</p>
+</div>
+
+<div id="b3" class="containerTab" style="display:none;background:grey">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Advantage of webpage</h2>
+  <p>An effective Website with great content increases the probability for increased sales. An online presence helps in terms of building and fostering a rapport among your customers. Providing special offers to loyal customers on your Website lets them know you appreciate their business.</p>
+</div>
+<div id="b4" class="containerTab" style="display:none;background:black">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <h2>Features</h2>
+  <p>Mobile Compatibility. ...
+Accessible to All Users. ...
+Well Planned Information Architecture. ...
+Well-Formatted Content That Is Easy to Scan. ...
+Fast Load Times. ...
+Browser Consistency. ...
+Effective Navigation. ...
+Good Error Handling</p>
+</div>
+<script>
+function openTab(tabName) {
+  var i, x;
+  x = document.getElementsByClassName("containerTab");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  document.getElementById(tabName).style.display = "block";
+}
+</script>
+
+</body>
